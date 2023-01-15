@@ -1,0 +1,31 @@
+RHCSA v9 --->RHCSA I -->fundementals :  
+				1-exploring arch
+				2-basic commands 
+				3-users &gps
+    				4-process 
+				5-permissions
+				6-JOBs 
+				7-networking 
+				8-firewall
+				9-shortlink 
+
+     --->RHCSA II-->professional
+		1-managing partition [6 objective]
+			traditional
+			LVM
+			VDO
+			Swap	
+			stratis
+		2-containers 
+		  pull container
+		  container storage
+		  Services to start container
+
+		3-SElinux 
+
+
+		4-ACL 
+
+		5-Bash scripting 
+
+		6-configure Web Server 
