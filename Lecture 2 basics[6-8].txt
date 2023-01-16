@@ -1,0 +1,136 @@
+[student@localhost ~]$ 
+
+
+student : logged in user
+localhost: your server name
+~ : current working directory 
+$ : Regular 
+#: root user
+home directory --> /home/username eg: /home/student
+root user home directory --> /root 
+
+###################
+Linux hirarechy 
+###################
+ this pc --->      /    main directory [first directory]
+
+
+                              /
+
+              boot    home  root   dev   var  etc  
+
+
+
+boot : bootable files location
+home : main user directory
+root : root user main directory
+dev  : any connected device [cdrom disks flash memory]
+var  : dynamic library [ logs store]
+etc  :main configuration files  
+
+
+**navigation in linux 
+two ways :
+1-absolute  [navigation from / ]
+2-relative [navigation from current directory]
+
+/home/student *
+
+
+
+                           /
+
+			home 
+
+			student 
+
+	Documents **		Download
+
+
+
+cd ../Documents
+cd /home/student/Documents
+
+cd ..     
+cd ~
+cd 
+cd /home/student
+
+cd  -   --->back 
+
+#################################
+Basic Commands
+#################################
+cd : change directory [navigation]
+ls : list files and directory
+cp : copy and past
+mv : cut and past
+touch : create file(s)
+mkdir : create directory(ies)
+rm    : delete file or dir
+rmdir: delete empty dir
+
+shell name expansion 
+
+
+
+                       
+			Abadnets
+
+Training 		Sales 			       IT 
+
+Courses    		sales1.txt sales2.txt 
+			sales3.txt  
+
+2021_Q1.txt 2021_Q2.txt  
+2021_Q3.txt  2021_Q4.txt 
+2022_Q1.txt 2022_Q2.txt 
+2022_Q3.txt  2022_Q4.txt 
+
+
+Lecture Commands :
+ 51  ls /home/student
+   52  ls  -l /home/student
+   53  mkdir /home/sutdent/dir1
+   54  mkdir /home/student/dir1
+   55  ls /home/student
+   56  rmdir /home/student/dir1
+   57  cd
+   58  touch f1 f2 f3 f4 f5
+   59  ls
+   60  touch f1.txt
+   61  ls
+   62  mv f2 dir2
+   63  ls
+   64  ls dir2
+   65  cp f3 dir2
+   66  ls
+   67  ls dir2
+   68  rmdir dir2
+   69  rm dir2
+   70  rm -r dir2
+   71  ls
+   72  clear
+   73  touch id{1..50}
+   74  ls
+   75  mkdir dirId{1..50}
+   76  ls
+   77  rm -r dirId{1..20}
+   78  ls
+   79  mkdir Abadnet/sales  Abadnet/Training  Abadnet/IT
+   80  clear
+   81  mkdir Abadnets/sales  Abadnets/Training  Abadnets/IT
+   82  mkdir -p  Abadnets/sales  Abadnets/Training  Abadnets/IT
+   83  mkdir  Abadnets/Training/courses
+   84  touch Abadnets/sales/sales{1,2,3}.txt
+   85  touch Abadnets/Training/courses/202{1,2}_Q{1..4}.txt
+   86  ls Abadnets/Training/courses/
+   87  mkdir -p  Abadnet1/{sales,Training,IT}
+   88  mkdir -p  Abadnet1/Training/courses
+   89  touch Abadnet1/Training/courses/202{1,2}_Q{1..4}.txt
+   90  touch Abadnet1/sales/sales{1,2,3}.txt
+   91  ls
+   92  cd Abadnets/Training/
+   93  mv ~/id*   .
+   94  ls
+   95  history
