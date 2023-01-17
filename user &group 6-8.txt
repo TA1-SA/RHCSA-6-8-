@@ -1,0 +1,148 @@
+##################################################
+Users&groups 
+##################################################
+
+-Os: collection of services ,needs permission which has be assigned by users only 
+
+-Users :
+ 1-system User [service user ,nologin]
+  id less than 1000
+  
+
+
+ 2-regular user [logged in users]
+ id is 1000 and more [until 60,000]
+
+
+**every user must have one primary group ,if you dont assgin a primary group ,system will create &assgin
+primary group with same name as username 
+
+**every user must have username
+
+** users configuration files ---> /etc/passwd [username ,userid,groupid,home directory]		
+				 /etc/shadow [password properties] (has password,last time changed the                                                    password,max password age,min password age
+
+======================================================================================================
+Groups:
+
+**every user must have one primary group & zero or more supplementary group
+
+**Groups
+1-system Group [service Group
+  id less than 1000
+  
+
+
+ 2-regular Group [primary or supplementary]
+ id is 1000 and more [until 60,000]
+
+
+
+**configuration file for group /etc/group [groupname ,groupid ,members]
+
+_____________________________________________________________________________________________________
+Commands[redhat style]:
+       
+useradd username
+useradd -u 3000 username
+
+usermod -g IT mhmad  ---->add mhmad to group IT as primary group
+usermod -G IT mhmad  ---->add mhmad to group IT as supplementary group
+usermod -L mhmad --->lock user mhmad account
+usermod -U mhmad--->unlock user mhmad account
+
+groupadd groupname
+groupadd -g 3000 groupname
+
+
+**password properties :
+chage -l username 
+chage -M 90 username : you must change password after 90 days
+chage -m 1 username : you can change password 1 time per days
+change -W 10 username  : 10 days before password expiry warninig 
+ 
+
+
+
+
+
+Commands in Lecture :
+  122  useradd u1
+  123  cat /etc/shadow
+  124  clear
+  125  tail -1  /etc/shadow
+  126  tail -1  /etc/passwd
+  127  tail   /etc/passwd
+  128  tail -1  /etc/shadow
+  129  tail -1  /etc/shadow
+  130  useradd u2 -p 123
+  131  tail -1  /etc/shadow
+  132  passwd u2
+  133  tail -1  /etc/shadow
+  134  clear
+  135  groupadd g1
+  136  groupadd -g 2000 g2
+  137  tail -2 /etc/group
+  138  usermod -g g1 u1
+  139  id u1
+  140  usermod -G g2 u1
+  141  id u1
+  142  ls -l /home/u1
+  143  ls -ld /home/u1
+  144  su - u1
+  145  clear
+  146  useradd -u 70000 u3
+  147  tail -1 /etc/passwd
+  148  history
+  149  clear
+  150  usermod -L u1
+  151  passwd u1
+  152  su - student
+  153  exit
+  154  chage -l u1
+  155  usermod -U u1
+  156  man usermod
+  157  usermod -L u1
+  158  chage -l u1
+  159  exit
+  160  usermod -U u1
+  161  exit
+  162  history
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
