@@ -1,0 +1,106 @@
+################################
+Permissions [Linux]
+################################
+
+Read -----> r   ---> 4
+
+
+write ---> w ----> 2 
+
+
+execute -->x ---> 1
+
+ drwxr-x--- student student 01 sun dir1
+ -rw-r----- student student 01 sun file1
+
+user owner
+group owner
+others 
+ 
+drwxr-x--- student student 01 sun dir1
+
+q1)give the group owner write permission on dir1
+
+symbolic :
+
+$chmod g+w dir1
+
+numeric :
+
+$chmod 770 dir1
+
+--------------------------------
+drwxrwx--- student student 01 sun dir1
+
+q2)add read and execute to others 
+
+chmod o+rx dir1
+
+
+chmod 775
+
+drwxrwxr-x student student 01 sun dir1
+
+
+permissions                  R                         W                              X
+
+file                      display content           change its content            excute the script 
+			 [cat head tail]              
+
+
+directory             disply content                create/delete file or dir      change to directory
+			[ls]                                                            [cd]
+
+
+Lecutre Commands:
+   85  chmod u-w wwwlogs/
+   86  ls -l
+   88  ls -ld wwwlogs/
+   89  mkdir wwwlogs/dir1
+   90  chmod u+w wwwlogs/
+   91  mkdir wwwlogs/dir1
+   92  ls -l
+   94  ls -ld wwwlogs/
+   95  chown u1 wwwlogs/
+   96  su -
+  251  chown :u1 /home/student/wwwlogs/
+  252  ls -ld /home/student/wwwlogs/
+  253  chown u2:u2 /home/student/wwwlogs/
+  254  ls -ld /home/student/wwwlogs/
+  255  chmod o=- /home/student/wwwlogs/
+  256  ls -ld /home/student/wwwlogs/
+  257  chmod g+w /home/student/wwwlogs/
+  258  chmod 770 /home/student/wwwlogs/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
