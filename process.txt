@@ -1,0 +1,136 @@
+Process : any running program called process 
+
+each process must have a user to run 
+each process has a parent process
+each process has some characteristics : 
+
+1-process id 
+2-allocated memory
+3-privileges 
+4-state :
+  -running r 
+  -sleeping s  d   k 
+  -suspended    t   t
+  -Zombie    z x
+  
+new state :
+
+ IDLE  I 
+
+
+
+process life cycle :---> 
+-the process scheduled in cpu 
+-then start runninig 
+-forking happens 
+-child process is instantiated 
+-parent process waits(sleeping state) until child process respond to the request 
+-request is back 
+-child process is now at (zombie state)
+-parent process cont to run if the process needs that 
+-then parent process is at (zombie state)
+
+commands :
+
+top   [real time monitoring]
+ps aux 
+ps -ef 
+
+--
+kill   [processid]
+
+
+kill  -9 [processid]
+
+kill -SIGSTOP processid
+
+kill -SIGCONT processid
+
+kill -SIGTERM processid
+
+
+if you write some commands to be run its called (job) [special case of process]
+
+jobs 
+
+ps j 
+
+--
+kill   [%jobid]
+
+
+kill  -9 [%jobid]
+
+kill -SIGSTOP [%jobid]
+
+kill -SIGCONT [%jobid]
+
+kill -SIGTERM [%jobid]
+
+
+
+if the job is running in the terminal , then from keyboard you can controll
+
+
+ctrl+z  --->stop
+
+bg %jobid  --->running in background
+fg %jobid  --->running in foreground
+
+ctrl+c --->terminate
+
+
+
+
+  223  ps aux
+  224  top
+  225  clear
+  226  (while true ; do echo -n "my first class " >>~/1stFile ;done)
+ctrl+z
+  227  bg %1
+  228  jobs
+  229  kill -SIGSTOP %1
+  230  jobs
+  231  clear
+  232  jobs
+  233  bg %1
+  234  kill -SIGSTOP %1
+  235  jobs
+  236  (while true ; do echo -n "my RHCSA class " >>~/1stFile;sleep 10 ;done) &
+  237  jobs
+
+  239  fg %2
+ctrl+c
+  240  jobs
+  241  fg %1
+ctrl+c
+  242   jobs
+  243  clear
+  244  jobs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
