@@ -1,0 +1,162 @@
+##############################
+Networking in redhat 9
+##############################
+
+
+Since redhat 7 networking is managed by Network Manager 
+
+
+-to know your ip address 
+ $ip a 
+ $ifconfig
+ $nmcli device show
+
+-to know your gateway
+ $ip route
+
+-to know your open sockets [ports]
+ $netstat -a 
+ $ss -lt 
+
+-to set ip address 
+ $nmcli connection add con-name [anyname] ifname ens32 type ethernet  autoconnect yes 
+  ipv4.address 192.168.200.13/24 ipv4.dns 192.168.100.1 ipv4.gateway 192.168.200.1 
+  ipv4.method manual
+
+-to modify your ip configuration 
+
+ $nmcli connection modify [con-name] ipv4.address 192.168.200.14/24
+ $nmcli connection up [con-name]
+
+-test connection to other server
+
+ $ping -c3 192.168.200.48 
+
+
+-to trace path to destination 
+
+ $tracepath google.com
+
+
+to connect other pcs in your local network :
+1-ip address
+2-subnet mask
++gaetway
++dns 
+
+
+ipv4 divided into 4 octets   [192].[168].[1].[200]
+
+1st octet Range ===>1-223 [class type]
+2nd ,3rd,4th octet ===>[0-255]  excluded ==>0,255 
+
+eg : ipv4.address  192.0.0.200/24  ===>valid ? valid
+eg : ipv4.address 192.13.1.255/24  ===>valid ?  not valid
+
+
+subnet mask ---->most important in networking config
+
+192 . 0 . 0 .200 
+
+255.255.255 .0
+
+192.255.245.200/24
+
+
+
+server1 192.168.200.10/24
+        255.255.255.0
+       _______________
+
+        NID 192.168.200.0
+
+server2 192.168.120.11/24
+        255.255.255.0   
+       ___________________
+NID    192.168.120.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===================
+
+
+Lecture Commands 
+
+
+ 335   nmcli connection add con-name static1 ifname ens32 type ethernet     autoconnect yes ipv4.addresses 192.168.20.13/24 ipv4.dns 192.168.100.1 ipv4.gateway 192.168.200.1 ipv4.method manual
+  336  nmcli connection show
+  337  nmcli device show
+  338  nmcli connection show
+  339  nmcli connection up static1
+  342  nmcli connection up static1
+  343  nmcli device show
+  345  netstat
+  346  netstat -a
+  347  ss -lt
+  348  man ss
+  349  ss -lt
+  351  nmcli connection add  ifname ens32 type ethernet     autoconnect yes        ipv4.addresses 192.168.20.13/24 ipv4.dns 192.168.100.1 ipv4.gateway 192.168.200.1   
+
+
+
+
+
+
+
+ipv4  classes 
+
+
+CLASS     A
+
+
+CLASS  	  B
+
+
+
+
+CLASS     C
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
