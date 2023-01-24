@@ -1,0 +1,12 @@
+#mount /dev/sr0 /mnt
+#vi /etc/yum.repos.d/name.repo 
+
+[BaseOS]
+name=BaseOsLocal
+baseurl=file:///mnt/BaseOS
+gpgcheck=no
+
+[AppStream]
+name=localAppStream
+baseurl=file:///mnt/AppStream
+gpgcheck=no
