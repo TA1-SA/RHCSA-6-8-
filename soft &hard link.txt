@@ -1,0 +1,166 @@
+#####################################
+Soft&Hard Link
+#####################################
+
+-soft link used with directory for shortcut
+
+-hard link used with files as a copy of 
+
+
+
+**Commands : 
+
+$ln -s /home/student/Desktop   StudentDesktop 
+
+
+
+Lecture Commands :
+
+ 513  ln -s /home/student/Documents/   StudentDocument
+  514  ls -l
+  515  clear
+  516  cd StudentDocument/
+  517  pwd
+  518  mkdir RootDir
+  519  exit
+  520  clear
+  521  cd StudentDocument/
+  522  pwd
+  523  exit
+  524  clear
+  525  ls -l /home/student/
+  526  clear
+  527  ln  /home/student/file2022  studentFile
+  528  cat StudentDocument/
+  529  cat student
+  530  cat studentFile
+  531  cat /home/student/file2022
+  532  ls -l
+  533  vi studentFile
+  534  cat /home/student/file2022
+
+  536  vi /home/student/file2022
+  537  cat /home/student/file2022
+  538  cat studentFile
+  539  rm /home/student/file2022
+  540  cat studentFile
+  541  ls -l
+  542  rm -r /home/student/Documents
+  543  ls -l
+  544  history
+#################################################
+secure shell [ssh]
+#################################################
+*protocol for linux devices used for remote  connection [secured way] port 22 
+
+*used for secure transfer of data between servers [sftp , scp]
+
+
+Commands :
+
+
+$ssh username@serverIP|Servername 
+Eg:
+$ssh student@192.168.200.104
+
+
+-to transfer data securly ,we used scp  
+
+**archiving and compression [backup]
+
+$tar  cf etc.tar /etc
+
+$scp etc.tar student@192.168.200.144:/home/student
+
+**compression: 
+
+1-gzip    tar czf etc.tar.gz  /etc
+2-bzip2   tar cjf etc.tar.bz  /etc 
+3-xz      tar cJf etc.tar.xz  /etc 
+
+**uncompress :
+
+1-gzip    tar xzf etc.tar.gz  
+2-bzip2   tar xjf etc.tar.bz   
+3-xz      tar xJf etc.tar.xz  
+4- archived  ---> tar xf etc.tar 
+
+**list content 
+1-gzip    tar tf etc.tar.gz  
+2-bzip2   tar tf etc.tar.bz   
+3-xz      tar tf etc.tar.xz  
+
+
+Lecture Commands:
+ 550  scp -r /etc/  student@192.168.200.144
+  551  ip a
+  552  clear
+  553  scp -r /etc/  192.168.200.144:/home/student
+  554  scp -r /etc/  student@192.168.200.144:/home/student
+  555  tar cf etc.tar student@192.168.200.144:/home/student
+  556  tar cf etc.tar /etc
+  557  clear
+  558  scp etc.tar student@192.168.200.144:/home/studetn
+  559  scp etc.tar student@192.168.200.144:/home/student
+  560  tar tf etc.tar
+  561  clear
+  562  tar czf etc.tar.gz /etc
+  563  tar cjf etc.tar.bz /etc
+  564  tar cJf etc.tar.xz /etc
+  565  ls -l etc*
+  566  ls -lh etc*
+  567  scp etc.tar.gz  student@192.168.200.144:/home/student
+  568  clear
+  569  scp etc.tar.bz  student@192.168.200.144:/home/student
+  570  scp etc.tar.xz  student@192.168.200.144:/home/student
+  571  ssh student@192.168.200.144
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
