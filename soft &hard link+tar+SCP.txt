@@ -101,7 +101,6 @@ Lecture Commands:
   556  tar cf etc.tar /etc
   557  clear
   558  scp etc.tar student@192.168.200.144:/home/studetn
-  559  scp etc.tar student@192.168.200.144:/home/student
   560  tar tf etc.tar
   561  clear
   562  tar czf etc.tar.gz /etc
