@@ -1,0 +1,64 @@
+######################################
+Managing Partitions
+######################################
+storage and space in linux is not the same as windows 
+
+
+in windows : DISK0    DISK1   DISK2
+
+DISK0==>c:   d:  
+Disk1 ==>f:
+Disk2==>G: H:
+
+ 
+In linux   : sda       sdb     sdc 
+
+sda1  /boot   ===> c:/windows  1GB 
+sda2  /       ===> remaining space 
+
+sdb ====>  sdb1  sdb2   sdb3  sdb4 
+
+1-choose the : 
+
+partition table ===>MBR ===> 4 primary                 ====>fdisk   <=2tb 
+
+partition table ==>GPT ===>128 primary partition    ===>  gdisk      >2tb 
+
+2-choose the:
+
+file System  ===> ext4 ===>  <=2tb    [MBR]
+ 
+file System ===>xfs ===>     >2tb     [GPT]
+
+3-mount the disk to a directory 
+ 
+ write the mounting data into  /etc/fstab
+eg: 
+vi /etc/fstab 
+/dev/sdb2  /apps  ext4  defaults 0 0 
+exit
+mount -a  
+
+  cd /apps
+
+****************************
+Command Lecture: 
+  575  lsblk
+  576  fdisk /dev/sdb
+  577  partprobe
+  578  clear
+  579  mkfs.ext4 /dev/sdb3
+  580  echo /dev/sdb3 /server1/  ext4  defaults 0 0 >> /etc/fstab
+  581  mount -a
+  582  df -h
+
+
+
+
+
+
+
+
+
+
+  
