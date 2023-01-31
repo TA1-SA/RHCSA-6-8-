@@ -1,0 +1,22 @@
+###############################
+Swap
+###############################
+**Additional Memory added to physical RAM to increase capacity 
+**could be 2 times of physical Memory
+
+Commads: 
+
+$free -h 
+
+
+
+Lecture Commands :
+  653  fdisk /dev/sde
+  654  partprobe
+  655  mkswap /dev/sde1
+  656  swapon /dev/sde1
+  657  free -h
+  658  echo /dev/sde1 swap swap  defaults 0 0 >> /etc/fstab
+  659  mount -a
+
+
