@@ -1,0 +1,24 @@
+########################
+Virtual Disk Optimizer [VDO]
+########################
+
+*Storage Feature optimized for virtual machines Disk
+*instantiated since redhat 7.6 
+*used thin provisining Technique 
+
+eg : if you have disk with physical size of 6G then you can create logical size of 30G 
+
+
+You have been provided with a disk drive attached to your system (/dev/sdd). create a VDO volume with the name (class1_vdo) and a logical size of 30GB.
+
+Format the VDO volume with the xfs filesystem, mount it on /class1_mnt and make it persistent across reboot.
+
+Solution :
+  634  pvcreate /dev/sdd
+  635  vgcreate -s 16M vdo02 /dev/sdd
+  636  vgdisplay vdo02
+  637  clear
+  641  lvcreate --name class1_vdo --type vdo --size 6G --virtualsize 30G  vdo02
+  642  mkfs.xfs /dev/vdo02/class1_vdo
+  643  mkdir /class1_mnt
+  644  echo /dev/vdo02/class1_vdo  /class1_mnt/ xfs defaults 0 0 >>/etc/fstab
