@@ -1,1 +1,49 @@
 
+Configure a cron Task.
+User natasha must configure a cron job, local time 14:23 runs and executes: */bin/echo hiya every day
+********************************************************************************************************
+Configure a user account.
+Create a user iar uid is 3400. Password is redhat 
+********************************************************************************************************
+Add a swap partition.
+Adding an extra 500M swap partition to your system, this swap partition should mount automatically when the system starts up. Don't remove and modify the
+existing swap partitions on your system.
+
+********************************************************************************************************
+Create a logical volume
+Create a new logical volume as required:
+Name the logical volume as database, belongs to datastore of the volume group, size is 50 PE.
+Expansion size of each volume in volume group datastore is 16MB.
+Use ext3 to format this new logical volume, this logical volume should automatically mount to /mnt/database
+********************************************************************************************************
+Configure your Host Name, IP Address, Gateway and DNS.
+Host name: dtop5.dn.ws.com
+IP Address: 172.28.10.5/4
+Gateway: 172.28.10.1
+DNS: 172.28.10.1
+********************************************************************************************************
+Create a 2G swap partition which take effect automatically at boot-start, and it should not affect the original swap partition
+********************************************************************************************************
+A YUM source has been provided in the
+http://instructor.example.com/pub/rhel6/dvd
+Configure your system and can be used normally.
+*******One Logical Volume is created named as myvol under vo volume group and is mounted. The Initial Size of that Logical Volume is 400MB. Make successfully that
+the size of Logical Volume 200MB without losing any data. The size of logical volume 200MB to 210MB will be acceptable.*************************************************************************************************
+
+********************************************************************************************************
+Create the user named eric and deny to interactive login.
+********************************************************************************************************
+There is a local logical volumes in your system, named with common and belong to VGSRV volume group, mount to the /common directory. The definition of size is
+128 MB.
+Requirement:
+Extend the logical volume to 190 MB without any loss of data. The size is allowed between 160-160 MB after extending.
+
+********************************************************************************************************
+
+
+You have been provided with a disk drive attached to your system (/dev/sdd). create a VDO volume with the name (clvdo) and a logical size of 70GB.
+
+Format the VDO volume with the ext filesystem, mount it on /class1 and make it persistent across reboot.
+
+********************************************************************************************************
+********************************************************************************************************
