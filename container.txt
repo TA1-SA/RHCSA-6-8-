@@ -1,0 +1,21 @@
+1-a)create container named apache1  from image
+ rhscl/httpd-24-rhel7
+
+2-mount presistantly the container directory /var/www/html with host directory  /home/student/wwwHtml
+
+$mkdir /home/student/wwwHtml
+
+$podman run -d  --name apache1 -v /home/student/wwwHtml:/var/www.html:Z   rhscl/httpd-24-rhel7
+
+
+ 
+1) b- and configure service named container-apache1  to run automaticlty
+
+
+$ mkdir -p .config/systemd/user
+$ cd .config/systemd/user/
+$ podman generate systemd --name apache1 --files 
+$ systemctl --user daemon-reload
+$ systemctl --user enable container-apache1.service
+$loginctl show-user
+$loginctl enable-ligner
