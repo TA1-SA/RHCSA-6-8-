@@ -1,0 +1,98 @@
+###################################
+Linux Security
+###################################
+two systems:
+
+1-firewall 
+filter incomming traffic (allow,Deny)
+
+2-SeLinux :
+
+secure the folder from the system service (Security context)
+
+
+ 673  firewall-cmd --list-all
+  674  firewall-cmd --list-all-zones
+  675  external
+  676  clear
+  677  firewall-cmd --list-all
+  678  clear
+  679  ls
+  680  ls /
+  681  ls -lZ /home/student/
+  682  clear
+  683  mkdir /sharedDir
+  684  ls -lZd /sharedDir
+  685  yum install httpd
+  686  clear
+  687  systemctl enable httpd
+  688  systemctl start httpd
+  689  systemctl status httpd
+  690  clear
+  691  ls -l /var/www
+  692  ls -lZ /var/www
+  693  echo im server 1 from /var/www >> /var/www/html/index.html
+  694  systemctl stop firewalld.service
+  695  systemctl start firewalld.service
+  696  firewall-cmd --list-all
+  697  clear
+  698  firewall-cmd --add-service=http
+  699  firewall-cmd --list-all
+  700  lsblk
+  701  clear
+  702  vi /etc/httpd/conf/httpd.conf
+  703  lsblk
+  704  vi /etc/httpd/conf/httpd.conf
+  705  clear
+  706  systemctl restart httpd
+  707  vi /etc/httpd/conf/httpd.conf
+  708  systemctl restart httpd
+  709  vi /etc/httpd/conf/httpd.conf
+  710  systemctl restart httpd
+  711  systemctl status httpd
+  712  clear
+  713  echo im server 1 from /var/www >> /sharedFile/index.html
+  714  echo im server 1 from /sharedfile > /sharedFile/index.html
+  715  setenforce 0
+  716  ls -ldz /sharedFile/
+  717  ls -ldZ /sharedFile/
+  718  ls -ldZ /var/www/
+  719  setenforce 1
+  720  tail /var/log/audit/audit.log
+  721  clear
+  722  ls -ldZ /var/www/
+  723  clear
+  724  history
+  725  ]
+  726  clear
+  727  ls -lZ /var/www/
+  728  semanage fcontext -a -t httpd_sys_content_t /sharedFile
+  729  restorecon -avR /sharedFile/
+  730  restorecon -vR /sharedFile/
+  731  semanage fcontext -a -t httpd_sys_content_t /sharedFile/index.html
+  732  restorecon -vR /sharedFile/index.html
+  733  ls -lZ /sharedFile/
+  734  getenforce
+  735  clear
+  736  firewall-cmd --list-all
+  737  firewall-cmd --add-port=80/tcp
+  738  firewall-cmd --list-all
+  739  clear
+  740  firewall-cmd --reload
+  741  firewall-cmd --list-all
+  742  firewall-cmd --add-port=80/tcp
+  743  firewall-cmd --add-port=80/tcp --permanent
+  744  firewall-cmd --list-all
+  745  firewall-cmd --reload
+  746  firewall-cmd --list-all
+  747  clear
+  748  firewall-cmd --add-service=http
+  749  firewall-cmd --list-all
+  750  clear
+  751  firewall-cmd --remove--service=http
+  752* firewall-cmd --remove-service=http
+  753  firewall-cmd --list-all
+  754  firewall-cmd --add-service=http --permanent
+  755  firewall-cmd --list-all
+  756  firewall-cmd --reload
+  757  firewall-cmd --list-all
