@@ -1,0 +1,17 @@
+###################################
+Schedualing Future Jobs 
+####################################
+
+two ways :
+
+1-one time    using command (at)
+
+2-reocurring  using crontab 
+
+
+   $crontab -e 
+
+    *       *		*		*         *  		 $ 
+ minutes   Hours       Day of month   month     Day of week   Command
+
+
