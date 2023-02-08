@@ -1,0 +1,77 @@
+##############################
+Access Control List [ACL]
+##############################
+
+**Advanced Permission 
+
+
+**every file or dir could have ACL 
+**if u see a plus sign , thats mean the ACL is manpluated 
+
+-rwxr--r--+ 1 student student       117 Jan 22 08:30  3rdScript
+
+**getfacl  3rdScript 
+
+*********** 
+Command Lecture :
+
+  349  getfacl  3rdScript
+
+  350  setfacl -m u:u1:rw 3rdScript
+modify ACL add permission of Read &write to user: u1  on file 3rdScript
+
+
+  351  ls -l 3rdScript
+  352  getfacl 3rdScript
+
+  353  setfacl -m g:u1:rw 3rdScript
+modify ACL add permission of Read &write to group:u1  on file 3rdScript
+
+
+  354  getfacl 3rdScript
+
+  355  setfacl -m u:u2:- 3rdScript
+modify ACL deny any acces to u2  on file 3rdScript
+
+
+  356  getfacl 3rdScript
+
+  363  setfacl -Rm u:u1:rw  /home/student/
+modify ACL add permission of Read &write to u1  on any folder or file in  /home/student  [R]
+
+  366  mkdir Videos/season3
+  367  ls -l Videos/
+
+
+  368  setfacl -m d:u:u1:rw  /home/student/Videos/
+modify ACL add future permission of Read &write to user:u1 on Videos dir
+
+
+  369  mkdir Videos/season4
+  370  ls -l Videos/
+
+  371  setfacl -Rm d:u:u1:rw  /home/student/Videos/
+*modify ACL add future/Now permission of Read &write to  user:u1  on any thing in  /home/student/Videos/
+
+
+  372  ls -l Videos/
+
+  373  setfacl -x d:u:u1  /home/student/Videos/
+*delete Future permission of user:u1 from  /home/student/Videos
+
+  374  mkdir Videos/season5
+  375  ls -l Videos/
+  376  getfacl Videos/season5
+  377  getfacl Videos/season4
+
+  378  setfacl -Rx d:u:u1  /home/student/Videos/
+*delete Future/Now permission of user:u1 from  /home/student/Videos
+
+
+  381  ls -l Videos/
+  382  getfacl Videos/season1
+
+  383  setfacl -Rx u:u1  /home/student/Videos/
+delete Now permission of user:u1 from  any thing in /home/student/Videos
+
+  384  history
