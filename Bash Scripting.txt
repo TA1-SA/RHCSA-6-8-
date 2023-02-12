@@ -1,0 +1,81 @@
+Bash Scripting : set of command programmed in bash to achieve certin tasks
+
+script -->file --->execute permission
+
+editor -->vim 
+lets start with the (shebang) [programming language type]
+#!/bin/bash
+
+echo hello world
+===================================
+vi  script1
+
+#!/bin/bash
+#this is our first script
+echo hello world                                   chmod +x scriptname     ./scriptname
+===================================
+vi script2
+
+#!/bin/bash
+##this script is my 2nd one ,basic usage echo
+echo "printing newline"
+echo -n "printing without new line"
+echo -n " no new line"
+
+==================================================
+ vi script3
+((sum=25+25))
+echo $sum
+=======================
+vi scriptForLoop
+#!/bin/bash
+#this file is using for loop 10 iterate
+for (( count=10;count>0;count--  ))
+do
+echo -n " $count "
+done
+printf "\n"
+================================
+vi scriptWhileLoop
+#!/bin/bash
+# loop with 4 times iterate
+valid=true
+count=1
+while [ $valid ]
+do
+if [ $count -eq 5  ]
+then
+break
+fi
+echo $count
+((count++))
+done                                      chmod u+x  scriptname                   ./scriptname
+========================================
+vi scriptWithArg
+#!/bin/bash
+echo Welcome $1 and $2  to RHCSA Course
+===========================================
+vi user_input
+#!/bin/bash
+echo -n "enter your name : "
+read name
+echo Welcome $name to RHCSA Course
+======================================
+bonus  how to add multiple users 
+
+vi listUsers
+ahmed 
+mhmad
+mustafa
+
+vi Useradd 
+
+for  i in `cat listUsers`;
+ do
+   echo  "adding User $i ";
+   useradd $i;
+ done
+
+
+
+
