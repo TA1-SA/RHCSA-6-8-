@@ -1,3 +1,5 @@
+this script bought by https://linuxhint.com/30_bash_script_examples/
+
 Bash Scripting : set of command programmed in bash to achieve certin tasks
 
 script -->file --->execute permission
