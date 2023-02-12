@@ -1,0 +1,75 @@
+#########################
+Logs in Redhat 
+#########################
+Legacy system write log on /var/log based on the
+configuration file : /etc/rsyslog.conf
+
+
+modern system : jounrnalctl 
+
+
+
+Commands in lecture :
+
+
+
+
+
+
+
+
+
+ 491  tail /var/log/secure
+  492  grep "192.168.8.8" /var/log/secure
+  493  tail /var/log/cron
+  494  tail /var/log/boot
+  495  tail /var/log/boot.log
+  496  cat /var/log/boot.log
+  497  tail /var/log/messages
+  498  cat /var/log/audit/audit.log
+  499  clear
+  500  grep -i Denied  /var/log/audit/audit.log
+  501  clear
+  502  cat /var/log/secure
+  503  clear
+  504  journalctl --since today
+  505  clear
+  506  journalctl --since today  _SYSTEM_UNIT=sshd.service
+  507  journalctl --since today  _SYSTEMD_UNIT=sshd.service
+  508  journalctl --since 2023-01-01
+  509  journalctl --since 2023-01-01  --until 2023-01-05
+  510  journalctl --since 2023-01-01  --until 2023-05-01
+  511  journalctl --since 2023-01-17  --until 2023-01-20
+  512  journalctl --since 2023-01-17  --until 2023-01-25
+  513  journalctl --since 2023-01-17
+  514  journalctl --since 2023-01-17 --until today
+  515  journalctl --until today
+  516  journalctl --until 2023-02-17
+  517  journalctl --until 2023-01-01
+  518  journalctl --until 2023-01-17
+  519  journalctl --until 2023-01-20
+  520  journalctl
+  521  journalctl --until today
+  522  journalctl --since today
+  523  journalctl _UID=0
+  524  journalctl _UID=1000
+  525  journalctl _UID=1000 _SYSTEMD_UNIT=sshd.service
+  526  journalctl _UID=0 _SYSTEMD_UNIT=sshd.service
+  527  journalctl _UID=0 _SYSTEMD_UNIT=sshd.service  _HOSTNAME=abc.com
+  528  journalctl _UID=0 _SYSTEMD_UNIT=sshd.service  _
+  529  journalctl _UID=0 _SYSTEMD_UNIT=sshd.service  _PID=1
+  530  journalctl _UID=0 _SYSTEMD_UNIT=sshd.service  _PID=0
+  531  journalctl   _PID=1
+  532  history
+  533  journalctl   _PID=1
+  534  cat /var/log/secure
+  535  clear
+  536  history
+  537  clear
+  538  vi /etc/rsyslog.conf
+  539  journalctl -xn
+  540  clear
+
+
+
+awk Commandshttps://www.geeksforgeeks.org/awk-command-unixlinux-examples/
