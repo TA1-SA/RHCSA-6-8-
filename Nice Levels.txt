@@ -1,0 +1,38 @@
+################################################
+Nice Level (priority)
+###############################################
+
+
+
+Levels =====> -20    +19
+
+
+**highest level is -20
+ 
+**lowest level is 19
+
+
+
+**negative level assigned only by root user
+
+**regular use can set priority up to 0 
+
+Eg :
+ 
+tar cfz etc.tar.gz /etc 
+
+nice -n -10   tar cfz etc.tar.gz /etc
+
+set by root user
+
+
+
+
+
+
+
+
+
+
+
+

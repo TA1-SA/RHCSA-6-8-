@@ -1,0 +1,9 @@
+##########################
+Secure copy between server 
+##########################
+
+** SCP command used ssh protocol to transfer  [port 22] 
+
+
+scp -r /etc  student@192.16
+8.200.13:/backup 
