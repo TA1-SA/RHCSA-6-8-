@@ -1,13 +1,13 @@
 Exam Contents :
 
-**Users&groups
-**Permissions
-**ACL
-**LVM ,VDO ,SWAP
-**Containers
-**reset root Password
-**Networking
-**Crontab
-**creating repository
+**Users&groups[20]
+**Permissions[10]
+**ACL[15]
+**LVM ,VDO ,SWAP  [70]
+**Containers[70]
+**reset root Password  [0]
+**Networking [20]
+**Crontab[10]
+**creating repository[15]
 
 
