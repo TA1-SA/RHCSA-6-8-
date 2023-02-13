@@ -1,0 +1,13 @@
+Exam Contents :
+
+**Users&groups
+**Permissions
+**ACL
+**LVM ,VDO ,SWAP
+**Containers
+**reset root Password
+**Networking
+**Crontab
+**creating repository
+
+
