@@ -1,0 +1,43 @@
+###################
+Stratis
+###################
+**local storage-management solution for Linux.
+**gives you access to advanced storage features:
+
+ **making Changes later
+ **Thin provisioning 
+ **File system Snapshot 
+
+$mount /dev/sr0 /mnt   ---only for personal use 
+
+$yum install stratisd stratis-cli
+
+$systemctl enable --now stratisd
+
+$systemctl status stratisd
+
+$stratis pool list
+
+$stratis pool create tekneed_pool /dev/sdh
+
+$stratis blockdev list tekneed_pool
+
+$stratis filesystem create tekneed_pool tekneed_fs
+
+$stratis filesystem list
+
+$mkdir /data22
+
+echo /dev/stratis/tekneed_pool/tekneed_fs  /data22   xfs  defaults 0 0 >>/etc/fstab
+
+
+
+
+
+
+
+
+
+
+
+
