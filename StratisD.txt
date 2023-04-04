@@ -28,7 +28,7 @@ $stratis filesystem list
 
 $mkdir /data22
 
-echo /dev/stratis/tekneed_pool/tekneed_fs  /data22   xfs  defaults 0 0 >>/etc/fstab
+echo /dev/stratis/tekneed_pool/tekneed_fs  /data22   xfs  defaults,x-systemd.requires=stratisd.service 0 0 >>/etc/fstab
 
 
 
