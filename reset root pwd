@@ -1,0 +1,15 @@
+############################
+Break Root Password
+############################
+1-interrupt boot process 
+2-choose the 2nd choice in boot menu
+3-press  " e "
+4-go to line start with linux   then press "end" and write down rd.break
+5-ctrl+x 
+6-press enter then write $mount -oremount,rw /sysroot 
+7-$chroot /sysroot 
+8- $passwd 
+9-enter the new password
+10-$touch /.autorelabel
+11-$exit
+12-$exit
